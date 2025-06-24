@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Medium.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+* + * {
+  margin-block-start: 1rem;
+}
+
+body {
+  --text-color: #141414;
+  --primary-color: #0065fe;
+  --neutral-color: #ffffff;
+
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--neutral-color);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--neutral-color);
+  padding: 1.2rem 3rem;
+  border-radius: 100px;
+  transition: all 0.5s ease;
+}
+
+.button > * {
+  vertical-align: middle;
+}
+
+.button:where(:hover, :focus-visible) {
+  --primary-color: #0052cc;
+}
+
+.button:where(:active) {
+  --primary-color: #0047b3;
+}
+
+.button--no-bg,
+.button--bordered {
+  --primary-color: transparent;
+  --neutral-color: #0065fe;
+}
+
+.button--no-bg:where(:hover, :focus-visible) {
+  --neutral-color: #0052cc;
+}
+
+.button--no-bg:where(:active) {
+  --neutral-color: #0047b3;
+}
+
+.button--bordered {
+  border: 1px solid var(--neutral-color);
+}
+
+.button--bordered:where(:hover, :focus-visible) {
+  --primary-color: #0052cc;
+  --neutral-color: #ffffff;
+}
+
+.button--bordered:where(:active) {
+  --primary-color: #0047b3;
+}
+
+.nav_link,
+[aria-label="content info contents"] :where(a),
+.contentinfo_para :where(a) {
+  border: none;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.nav_link:where(:hover, :focus),
+[aria-label="content info contents"] :where(a:hover, a:focus),
+.contentinfo_para :where(a:hover, a:focus) {
+  color: var(--primary-color);
+}
+
+button.nav_link::after {
+  display: inline-block;
+  content: "";
+  background: url(../image/arrowdown-2.svg) no-repeat;
+  width: 2rem;
+  height: 1rem;
+  margin-inline-start: 1rem;
+  transition: all 0.5s ease;
+}
+
+button.nav_link:hover::after {
+  background-image: url(../image/arrowdowndiff.svg);
+}
