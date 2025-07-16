@@ -41,6 +41,7 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--neutral-color);
+  margin: 1rem 2rem;
 }
 
 h1,
@@ -54,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  color: var(--primary-color);
+}
+
 img {
   max-inline-size: 100%;
   block-size: auto;
@@ -61,6 +66,7 @@ img {
 
 .button {
   display: inline-block;
+  line-height: 0.75;
   background-color: var(--primary-color);
   border: none;
   color: var(--neutral-color);
@@ -108,6 +114,10 @@ img {
   --primary-color: #0047b3;
 }
 
+.nav_link {
+  line-height: 1;
+}
+
 .nav_link,
 [aria-label="content info contents"] :where(a),
 .contentinfo_para :where(a) {
@@ -134,4 +144,46 @@ button.nav_link::after {
 
 button.nav_link:hover::after {
   background-image: url(../image/arrowdowndiff.svg);
+}
+
+nav {
+  --justify: space-between;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: var(--justify);
+  align-items: center;
+}
+
+nav > *,
+nav button {
+  margin: 0;
+  padding: 0;
+}
+
+.middle-nav-link > * {
+  margin-inline-start: 3rem;
+}
+
+.wrapper {
+  --space: 110rem;
+
+  display: grid;
+  grid-template-columns: 1fr min(var(--space), 100%) 1fr;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.nav_logo {
+  width: 15.5rem;
+  height: 4rem;
+}
+
+@media (max-width: 30rem) {
+  nav {
+    --justify: center;
+    gap: 1rem;
+  }
 }
