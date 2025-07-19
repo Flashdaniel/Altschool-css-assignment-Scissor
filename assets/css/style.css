@@ -212,6 +212,36 @@ nav button {
   margin-block: 2rem 3rem;
 }
 
+.header_decorations {
+  max-inline-size: 100rem;
+}
+
+.header_decoration-1_group {
+  display: grid;
+  align-items: start;
+  margin-left: auto;
+  width: min(76.8rem, 100%);
+}
+
+.header_decoration-1_group > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.header_decoration-1 {
+  border: 0.5px solid var(--primary-color);
+  border-radius: 2.4rem;
+  padding: 3.8rem 5rem;
+  background: linear-gradient(45deg, #e2e9f0 10%, transparent, transparent),
+    #fff;
+}
+
+.header_decoration-1_text {
+  text-align: center;
+  max-inline-size: 38ch;
+  margin-inline: auto;
+}
+
 @media (max-width: 30rem) {
   h1 {
     --line-height: 190%;
@@ -221,8 +251,4 @@ nav button {
     --justify: center;
     gap: 1rem;
   }
-
-  /* .underline-icon {
-    width: 8rem;
-  } */
 }
