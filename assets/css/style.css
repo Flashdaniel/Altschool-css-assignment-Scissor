@@ -41,8 +41,9 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--neutral-color);
-  margin: 1rem 2rem;
+  margin: 1rem 0;
 }
+
 h1 {
   --line-height: 204.17%;
 
@@ -186,6 +187,10 @@ nav button {
   height: 4rem;
 }
 
+.inline-edge {
+  padding-inline: 2rem;
+}
+
 .header_text-group {
   text-align: center;
   max-inline-size: clamp(72ch, 5ch + 60vw, 100ch);
@@ -242,6 +247,27 @@ nav button {
   margin-inline: auto;
 }
 
+.semi-circle-deco {
+  --block-space: 1.5rem;
+
+  grid-column: 1/-1;
+  background-image: url(../image/rectangle-semi-circle.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: var(--block-space);
+  margin-block-start: 5rem;
+}
+
+.header_decoration-2 {
+  max-inline-size: 96rem;
+  margin: auto;
+}
+
+.header_decoration-2 > img {
+  display: block;
+  margin-inline-start: auto;
+}
+
 @media (max-width: 30rem) {
   h1 {
     --line-height: 190%;
@@ -250,5 +276,9 @@ nav button {
   nav {
     --justify: center;
     gap: 1rem;
+  }
+
+  .semi-circle-deco {
+    --block-space: 0;
   }
 }
