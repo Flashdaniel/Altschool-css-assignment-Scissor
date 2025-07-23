@@ -281,6 +281,26 @@ nav button {
   margin-inline-start: auto;
 }
 
+main {
+  --text-padding: 1.5rem;
+}
+
+main h2:not([id="rlo"]) {
+  display: flex;
+  gap: 1rem;
+}
+
+main h2:not([id="rlo"])::before {
+  display: inline-block;
+  content: "";
+  inline-size: 0.5rem;
+  background: linear-gradient(#112232, #4d6b8800);
+}
+
+main h2:not([id="rlo"]) + p {
+  padding-inline-start: var(--text-padding);
+}
+
 .possibilities {
   grid-column: 1/-1;
   background: #f9fbfd;
@@ -291,7 +311,7 @@ nav button {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
   padding-block: 3rem;
 }
@@ -300,13 +320,53 @@ nav button {
   display: inherit;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: clamp(3rem, 2rem + 2vw, 5rem);
+  gap: clamp(4rem, 3rem + 10vw, 8.1rem);
   list-style: none;
   padding: 0;
 }
 
 .possibilities-list > li {
   margin: 0;
+}
+
+.why {
+  --size: 33ch;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(3rem, 2.5rem + 3vw, 6rem);
+  margin-block: 6rem 9rem;
+}
+
+.why_article {
+  inline-size: var(--size);
+  flex: 1;
+}
+
+.why_list {
+  display: inherit;
+  flex-wrap: wrap;
+  gap: 3rem;
+  list-style: none;
+  inline-size: min(70rem, 100%);
+  justify-content: space-between;
+  padding: 0;
+}
+
+.why_list_item {
+  max-inline-size: var(--size);
+}
+
+.why_icon-wrapper {
+  display: inline-block;
+  margin-block-end: 1.5rem;
+  background-color: #3284ff21;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.why_icon {
+  display: block;
 }
 
 @media (max-width: 30em) {
