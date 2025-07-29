@@ -47,6 +47,7 @@ body {
 main {
   --text-padding: 1.5rem;
   --h2-size: clamp(1.5rem, 0.2rem + 1.6vw, 3.2rem);
+  --size14: clamp(1rem, 0.5rem + 1.5vw, 1.4rem);
 }
 
 h1 {
@@ -58,7 +59,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.8rem, 0.5rem + 2vw, 4rem);
+  font-size: clamp(1.8rem, 0.5rem + 1.7vw, 4rem);
 }
 
 h3 {
@@ -326,7 +327,7 @@ main h2:not([id="rlo"]) + p {
   display: inherit;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: clamp(4rem, 3rem + 10vw, 8.1rem);
+  gap: clamp(4rem, 3rem + 10vw, 8.7rem);
 }
 
 .possibilities-list > li {
@@ -417,7 +418,7 @@ main h2:not([id="rlo"]) + p {
 }
 
 .pricing_list_item_offers {
-  font-size: clamp(1rem, 0.5rem + 1.5vw, 1.4rem);
+  font-size: var(--size14);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -432,7 +433,7 @@ main h2:not([id="rlo"]) + p {
 
 .price-btn-group {
   display: flex;
-  inline-size: fit-content;
+  max-inline-size: 42rem;
   flex-wrap: wrap;
   gap: 1rem;
   margin-inline: auto;
@@ -442,7 +443,126 @@ main h2:not([id="rlo"]) + p {
 
 .price-btn-group > * {
   margin: 0;
-  flex: 1 0 auto;
+  flex: 1 0 0;
+  text-wrap: nowrap;
+}
+
+.URL-shortener {
+  position: relative;
+  grid-column: 1/-1;
+  padding-block: 5rem;
+  margin-block-end: 2.5rem;
+  background: linear-gradient(#1e3448 100%, #1e344800);
+}
+
+.URL-shortener::after,
+.URL-shortener::before {
+  position: absolute;
+  content: "";
+  inline-size: 100%;
+  block-size: 100%;
+  top: 0;
+  left: 0;
+}
+
+.URL-shortener::before {
+  background: url(../image/bg-form-img.svg), url(../image/bg-form-img1.svg),
+    url(../image/bg-form-img2.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 43%;
+}
+
+.URL-shortener::after {
+  background: url(../image/bg-form-img3.svg) right bottom -60%,
+    url(../image/bg-form-img4.svg) right bottom -8%;
+  background-repeat: no-repeat;
+}
+
+.URL-shortener-form {
+  --gap: 1.5rem;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  background: var(--neutral-color);
+  max-inline-size: 40rem;
+  margin-inline: auto;
+  color: var(--primary-color);
+  padding: 2.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.form-group {
+  --space: 1.4rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-basis: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+.form-group > * {
+  grid-row: 1;
+  grid-column: 1/-1;
+  transition: all 0.8s;
+}
+
+.form-group:focus-within > * {
+  --margin-down: 1rem;
+  --padding-inline: 0;
+  --opacity: 1;
+
+  grid-row: initial;
+}
+
+.form-group > span {
+  grid-row: inherit;
+}
+
+input,
+select {
+  background-color: var(--neutral-color);
+  padding: var(--space);
+  margin: 0;
+  border-radius: 0.7rem;
+  border: 1px solid var(--primary-color);
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #1e3448;
+}
+
+.form-group:nth-of-type(2),
+.form-group:nth-of-type(3) {
+  align-self: end;
+  flex-basis: calc(50% - var(--gap) / 2);
+}
+
+.label[for="domain"] {
+  opacity: var(--opacity, 0);
+}
+
+.label {
+  padding-inline: var(--padding-inline, var(--space));
+  margin-block-end: var(--margin-down);
+  z-index: 1;
+}
+
+.form-text {
+  font-size: var(--size14);
+}
+
+.form-text a {
+  font-weight: 600;
+}
+
+.form-group .icon {
+  max-inline-size: 1.4rem;
 }
 
 @media (max-width: 30em) {
