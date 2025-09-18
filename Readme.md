@@ -19,7 +19,7 @@ This is the finished solution
 
 ### Links
 
-- Live Site URL: [url]()
+- Live Site URL: [url](https://flashdaniel.github.io/Altschool-css-assignment-Scissor/)
 
 ## My process
 
