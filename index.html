@@ -11,6 +11,7 @@
     />
 
     <title>Scissor</title>
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -65,7 +66,7 @@
       </section>
 
       <section class="header_decorations inline-edge">
-        <div class="header_decoration-1_group">
+        <div class="header_decoration-1_group slide-in">
           <img
             src="./assets/image/pearshape.svg"
             alt=""
@@ -593,58 +594,59 @@
       </section>
     </main>
 
-    <footer class="contentinfo inline-edge">
-      <section aria-label="content info header">
-        <a href="#" class="logo-link contentinfo_logo-link"
-          ><img
-            class="logo contentinfo_logo"
-            src="./assets/image/Logo-2.svg"
-            alt="Scissor"
-            role="img"
-            width="155"
-            height="40"
-        /></a>
+    <footer class="contentinfo wrapper inline-edge">
+      <div class="contentinfo_group">
+        <section aria-label="content info header" class="contentinfo_header">
+          <a href="#" class="logo-link contentinfo_logo-link"
+            ><img
+              class="logo contentinfo_logo"
+              src="./assets/image/Logo-2.svg"
+              alt="Scissor"
+              role="img"
+              width="155"
+              height="40"
+          /></a>
 
-        <div class="social">
-          <a class="link social_link" href="#"
-            ><img
-              class="icon twitter-icon"
-              src="./assets/image/social-twitter.svg"
-              alt="twitter"
-              role="img"
-              width="24"
-              height="24"
-          /></a>
-          <a class="link social_link" href="#"
-            ><img
-              class="icon instagram-icon"
-              src="./assets/image/social-insta.svg"
-              alt="instagram"
-              role="img"
-              width="24"
-              height="24"
-          /></a>
-          <a class="link social_link" href="#"
-            ><img
-              class="icon linkedin-icon"
-              src="./assets/image/social-linkdin.svg"
-              alt="linkedin"
-              role="img"
-              width="24"
-              height="24"
-          /></a>
-          <a class="link social_link" href="#"
-            ><img
-              class="icon facebook-icon"
-              src="./assets/image/social-facebook.svg"
-              alt="facebook"
-              role="img"
-              width="24"
-              height="24"
-          /></a>
-        </div>
-      </section>
-      <section aria-label="content info contents">
+          <div class="social">
+            <a class="link social_link" href="#"
+              ><img
+                class="icon twitter-icon"
+                src="./assets/image/social-twitter.svg"
+                alt="twitter"
+                role="img"
+                width="24"
+                height="24"
+            /></a>
+            <a class="link social_link" href="#"
+              ><img
+                class="icon instagram-icon"
+                src="./assets/image/social-insta.svg"
+                alt="instagram"
+                role="img"
+                width="24"
+                height="24"
+            /></a>
+            <a class="link social_link" href="#"
+              ><img
+                class="icon linkedin-icon"
+                src="./assets/image/social-linkdin.svg"
+                alt="linkedin"
+                role="img"
+                width="24"
+                height="24"
+            /></a>
+            <a class="link social_link" href="#"
+              ><img
+                class="icon facebook-icon"
+                src="./assets/image/social-facebook.svg"
+                alt="facebook"
+                role="img"
+                width="24"
+                height="24"
+            /></a>
+          </div>
+        </section>
+
         <ul class="contentinfo_list">
           <li class="contentinfo_list-item">
             <h3 class="contentinfo_list-item_h3">Why Scissor ?</h3>
@@ -787,7 +789,8 @@
             </ul>
           </li>
         </ul>
-      </section>
+      </div>
+
       <p class="contentinfo_para">
         <a href="#">Term of Service</a><a href="#">Security</a
         ><span>Scissor 2023</span>

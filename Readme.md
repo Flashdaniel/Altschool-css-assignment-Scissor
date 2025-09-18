@@ -15,7 +15,7 @@ This is the finished solution
 
 ### Screenshot
 
-![](./assets/images/Screenshot.png)
+![](./assets/image/Screenshot.png)
 
 ### Links
 
